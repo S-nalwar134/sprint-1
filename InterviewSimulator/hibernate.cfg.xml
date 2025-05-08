@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/interviewsimulator</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">security</property>
+
+        <!-- Hibernate Settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- Only one declaration here -->
+
+
+        <!-- Entity Mapping -->
+        <mapping class="com.InterviewSimulator.entity.User"/>
+        <mapping class="com.InterviewSimulator.entity.Question"/>
+        <mapping class="com.InterviewSimulator.entity.Answer"/>
+        <mapping class="com.InterviewSimulator.entity.Report"/>
+        <mapping class="com.InterviewSimulator.entity.Response"/>
+        <mapping class="com.InterviewSimulator.entity.InterviewSession"/>
+    </session-factory>
+</hibernate-configuration>
